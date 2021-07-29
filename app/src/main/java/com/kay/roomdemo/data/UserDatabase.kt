@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.kay.roomdemo.model.User
 
 
 // Contains the database holder and serves as the main access pont for the underlying connection your app's persisted, relational data.

@@ -11,8 +11,8 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.kay.roomdemo.R
-import com.kay.roomdemo.data.User
-import com.kay.roomdemo.data.UserViewModel
+import com.kay.roomdemo.model.User
+import com.kay.roomdemo.viewmodel.UserViewModel
 import com.kay.roomdemo.databinding.FragmentAddBinding
 
 
@@ -59,7 +59,7 @@ class AddFragment : Fragment() {
         }
     }
 
-    // function that checks if the inputfield is empty
+    // Function that checks if the inputfield is empty
     private fun inputCheck(firstName: String, lastName: String, age: Editable): Boolean{
         return !(TextUtils.isEmpty(firstName) && TextUtils.isEmpty(lastName) && age.isEmpty())
     }

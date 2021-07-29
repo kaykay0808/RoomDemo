@@ -1,9 +1,12 @@
-package com.kay.roomdemo.data
+package com.kay.roomdemo.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.kay.roomdemo.data.UserDatabase
+import com.kay.roomdemo.repository.UserRepository
+import com.kay.roomdemo.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

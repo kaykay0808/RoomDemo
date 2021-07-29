@@ -10,8 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kay.roomdemo.R
-import com.kay.roomdemo.data.UserViewModel
-import com.kay.roomdemo.databinding.FragmentAddBinding
+import com.kay.roomdemo.viewmodel.UserViewModel
 import com.kay.roomdemo.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
@@ -41,6 +40,7 @@ class ListFragment : Fragment() {
             adapter.setData(user)
         })
 
+        // Floating button
         binding.floatingActionButton.setOnClickListener{
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }

@@ -1,11 +1,9 @@
 package com.kay.roomdemo.fragments.list
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.kay.roomdemo.R
-import com.kay.roomdemo.data.User
+import com.kay.roomdemo.model.User
 import com.kay.roomdemo.databinding.CustomRowBinding
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {

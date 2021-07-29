@@ -1,6 +1,8 @@
-package com.kay.roomdemo.data
+package com.kay.roomdemo.repository
 
 import androidx.lifecycle.LiveData
+import com.kay.roomdemo.data.UserDao
+import com.kay.roomdemo.model.User
 
 
 // UserRepository: A Repository class abstracts access to multiple data sources.
