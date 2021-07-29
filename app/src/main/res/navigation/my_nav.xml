@@ -29,9 +29,13 @@
     <fragment
         android:id="@+id/updateFragment"
         android:name="com.kay.roomdemo.fragments.update.UpdateFragment"
-        android:label="UpdateFragment" >
+        android:label="Update"
+        tools:layout="@layout/fragment_update">
         <action
             android:id="@+id/action_updateFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <argument
+            android:name="currentUser"
+            app:argType="com.kay.roomdemo.model.User" />
     </fragment>
 </navigation>
