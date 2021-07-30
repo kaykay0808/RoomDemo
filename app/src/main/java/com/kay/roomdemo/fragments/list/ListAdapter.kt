@@ -29,7 +29,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.binding.ageTxt.text = currentItem.age.toString()
 
         holder.binding.rowLayout.setOnClickListener {
-            val action = ListFragmentDirections.actionListFragmentToAddFragment(currentItem)
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
         }
     }

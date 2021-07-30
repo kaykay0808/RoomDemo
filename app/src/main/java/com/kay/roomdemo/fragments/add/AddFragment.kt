@@ -59,7 +59,7 @@ class AddFragment : Fragment() {
         }
     }
 
-    // Function that checks if the inputfield is empty
+    // Function that checks if the input field is empty
     private fun inputCheck(firstName: String, lastName: String, age: Editable): Boolean{
         return !(TextUtils.isEmpty(firstName) && TextUtils.isEmpty(lastName) && age.isEmpty())
     }
