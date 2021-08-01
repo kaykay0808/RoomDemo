@@ -10,8 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kay.roomdemo.R
-import com.kay.roomdemo.viewmodel.UserViewModel
 import com.kay.roomdemo.databinding.FragmentListBinding
+import com.kay.roomdemo.viewmodel.UserViewModel
 
 class ListFragment : Fragment() {
 
@@ -20,9 +20,9 @@ class ListFragment : Fragment() {
 
     private lateinit var mUserViewModel: UserViewModel
 
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
@@ -36,12 +36,15 @@ class ListFragment : Fragment() {
 
         // UserViewModel
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-        mUserViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
-            adapter.setData(user)
-        })
+        mUserViewModel.readAllData.observe(
+            viewLifecycleOwner,
+            Observer { user ->
+                adapter.setData(user)
+            }
+        )
 
         // Floating button
-        binding.floatingActionButton.setOnClickListener{
+        binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
 
@@ -56,7 +59,7 @@ class ListFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.menu_delete){
+        if (item.itemId == R.id.menu_delete) {
             deleteAllUsers()
         }
         return super.onOptionsItemSelected(item)
@@ -66,9 +69,11 @@ class ListFragment : Fragment() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes") { _, _ ->
             mUserViewModel.deleteAllUsers()
-            Toast.makeText(requireContext(),
+            Toast.makeText(
+                requireContext(),
                 "Successfully removed everything",
-                Toast.LENGTH_SHORT).show()
+                Toast.LENGTH_SHORT
+            ).show()
         }
         builder.setNegativeButton("No") { _, _ -> }
         builder.setTitle("Delete everything?")
@@ -80,5 +85,4 @@ class ListFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

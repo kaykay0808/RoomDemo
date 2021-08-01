@@ -7,7 +7,6 @@ import kotlinx.parcelize.Parcelize
 
 // USER: Represent a table within the database.
 
-
 @Parcelize
 // we need to specify a table name
 @Entity(tableName = "user_table")
@@ -17,4 +16,4 @@ data class User(
     val firstName: String,
     val lastName: String,
     val age: Int
-): Parcelable
+) : Parcelable

@@ -4,16 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.kay.roomdemo.model.User
 import com.kay.roomdemo.databinding.CustomRowBinding
+import com.kay.roomdemo.model.User
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     private var userList = emptyList<User>()
 
-    class MyViewHolder (val binding: CustomRowBinding): RecyclerView.ViewHolder(binding.root){
-
-    }
+    class MyViewHolder(val binding: CustomRowBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -38,7 +36,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         return userList.size
     }
 
-    fun setData(user: List<User>){
+    fun setData(user: List<User>) {
         this.userList = user
         notifyDataSetChanged()
     }

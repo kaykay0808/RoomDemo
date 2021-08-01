@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.kay.roomdemo.model.User
 
-
 // Dao needs to be an interface?
 
 @Dao
