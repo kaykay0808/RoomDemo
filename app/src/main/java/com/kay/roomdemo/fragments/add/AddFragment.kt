@@ -30,6 +30,7 @@ class AddFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentAddBinding.inflate(inflater, container, false)
 
+        // UserViewModel??
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
         // ADD BUTTON
@@ -45,13 +46,14 @@ class AddFragment : Fragment() {
         val lastName = binding.addLastNameEt.text.toString()
         val age = binding.addAgeEt.text
 
+        // Check if input is empty
         if (inputCheck(firstName, lastName, age)) {
             // create user object
             val user = User(0, firstName, lastName, Integer.parseInt(age.toString()))
-            // Add Data to Database
+            // Add Data/user to Database
             mUserViewModel.addUser(user)
             Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
-            // Navigate back
+            // Navigate back to list fragment
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         } else {
             Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_LONG).show()

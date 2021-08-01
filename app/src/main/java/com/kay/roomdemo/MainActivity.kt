@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // This methods finds the navHost which hold the floating button, making navigating between fragments work
         setupActionBarWithNavController(findNavController(R.id.fragment))
     }
 

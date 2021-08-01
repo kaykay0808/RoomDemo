@@ -13,8 +13,9 @@ abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
 
+    // I do not understand this block of code.
     companion object {
-        @Volatile
+        @Volatile // <- What?
         private var INSTANCE: UserDatabase? = null
 
         fun getDatabase(context: Context): UserDatabase {

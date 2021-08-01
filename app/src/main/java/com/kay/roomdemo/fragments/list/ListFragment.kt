@@ -43,7 +43,7 @@ class ListFragment : Fragment() {
             }
         )
 
-        // Floating button
+        // Floating button: <<Navigate from listFragment to addFragment>>
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
