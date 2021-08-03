@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import com.kay.roomdemo.model.User
 
 // Contains the database holder and serves as the main access pont for the underlying connection your app's persisted, relational data.
+// is this a saving point?
 
 @Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
