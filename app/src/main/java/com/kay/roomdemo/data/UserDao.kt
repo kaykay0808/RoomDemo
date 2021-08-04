@@ -30,6 +30,6 @@ interface UserDao {
     suspend fun deleteAllUsers()
 
     // Reading the data
-    @Query("SELECT * FROM user_table ORDER BY id ASC") // <- what?
+    @Query("SELECT * FROM user_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<User>>
 }

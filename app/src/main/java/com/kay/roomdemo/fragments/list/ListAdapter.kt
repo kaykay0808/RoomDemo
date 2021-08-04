@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kay.roomdemo.databinding.CustomRowBinding
 import com.kay.roomdemo.model.User
 
+
+
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     private var userList = emptyList<User>()

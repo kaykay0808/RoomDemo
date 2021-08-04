@@ -7,16 +7,14 @@ import androidx.room.RoomDatabase
 import com.kay.roomdemo.model.User
 
 // Contains the database holder and serves as the main access pont for the underlying connection your app's persisted, relational data.
-// is this a saving point?
 
 @Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
 
-    // I do not understand this block of code.
     companion object {
-        @Volatile // <- What?
+        @Volatile
         private var INSTANCE: UserDatabase? = null
 
         fun getDatabase(context: Context): UserDatabase {
